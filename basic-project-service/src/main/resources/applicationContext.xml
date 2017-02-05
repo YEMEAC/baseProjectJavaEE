@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+       http://www.springframework.org/schema/context 
+       http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+    
+    <!-- enable annotation configuration based-->
+    <context:annotation-config/>
+    <!-- bean's locations to scan with annotations @Component @Service @Reposiory @Controller for autowiring-->
+    <context:component-scan base-package="com.melo.basic.project.service.clients.impl" />
+    <context:component-scan base-package="com.melo.basic.project.service.services.impl" />
+    
+    parece que tambien tiene que escanear los del package del los otros projectos
+     tiene sentido al estar incluidos, y mas si es un jar como si solo acoplara otro package
+    lo que me pregunto si se hace xml como lohizo isabel porque creo que no he visto ningun include
+    comprovar! ybuscar e internet esto tmb para confirma que es asi tambien mirar porque de cada packing
+    en el pom xk aun sin poner packing jar lo escnaeaba bien, el persitent api del jpa tambien ai k poner el scan</beans
+    este lo cual tiene sentido ya que cuando springtoma el control de es zona debe saber dond buscar los
+    autowuired de ese modulo cuando se hacen request desde clases delmismo 
+    <context:component-scan base-package="com.melo.basic.project.jpa.model.dao.impl.hibernate" />
+    
+    <!-- bean definitions go here -->
+
+</beans>
